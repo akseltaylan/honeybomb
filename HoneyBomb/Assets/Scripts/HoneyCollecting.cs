@@ -6,6 +6,7 @@ public class HoneyCollecting : MonoBehaviour {
 
     GameObject player;
     Camera cam;
+    public int distanceThreshold = 25;
 
     void Start () {
         player = GameObject.FindGameObjectWithTag("Player");
@@ -14,7 +15,7 @@ public class HoneyCollecting : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        Debug.Log(honeyAttainable());
+        //Debug.Log(honeyAttainable());
 	}
 
     // checks if honey is in camera's view and player is close enough to gather it
@@ -22,7 +23,7 @@ public class HoneyCollecting : MonoBehaviour {
     {
         Vector3 screenPoint = cam.WorldToViewportPoint(transform.position);
         bool onScreen = screenPoint.z > 0 && screenPoint.x > 0 && screenPoint.x < 1 && screenPoint.y > 0 && screenPoint.y < 1;
-        bool closeEnough = Mathf.Abs(transform.position.x - player.transform.position.x) < 30 && Mathf.Abs(transform.position.z - player.transform.position.z) < 30;
+        bool closeEnough = Mathf.Abs(transform.position.x - player.transform.position.x) < distanceThreshold && Mathf.Abs(transform.position.z - player.transform.position.z) < distanceThreshold;
         return onScreen && closeEnough;
     }
 }
