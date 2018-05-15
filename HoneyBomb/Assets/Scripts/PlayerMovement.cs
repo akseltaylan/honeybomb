@@ -17,6 +17,7 @@ public class PlayerMovement : MonoBehaviour {
 	}
 	
 	void Update () {
+
         float xMovement = Input.GetAxisRaw("Horizontal");
         float yMovement = Input.GetAxisRaw("Vertical");
 
@@ -55,6 +56,7 @@ public class PlayerMovement : MonoBehaviour {
     {
         if (velocity != new Vector3(0,0,0))
         {
+            
             rb.MovePosition(transform.position + velocity * Time.fixedDeltaTime);
         }
     }
