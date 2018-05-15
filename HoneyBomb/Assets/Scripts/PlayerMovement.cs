@@ -42,6 +42,15 @@ public class PlayerMovement : MonoBehaviour {
         cameraRotate();
     }
 
+    private void OnCollisionEnter(Collision col)
+    {
+        if (col.gameObject.tag == "Boundary")
+        {
+            velocity = new Vector3(0, 0, 0);
+            Debug.Log("collided");
+        }
+    }
+
     void playerMove ()
     {
         if (velocity != new Vector3(0,0,0))
@@ -63,7 +72,7 @@ public class PlayerMovement : MonoBehaviour {
     {
         if (cameraRotation != new Vector3(0,0,0))
         {
-            cam.transform.Rotate(cameraRotation);
+            cam.transform.Rotate(cameraRotation * -1);
         }
     }
 

@@ -4,13 +4,16 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour {
 
-	// Use this for initialization
+    // GAME OBJECTS
+    GameObject player;
+    Camera cam;
+
+    // GAME VARIABLES
+    public int honeyMaxAmt = 25;
+    public int honeyNeeded = 100;
+
 	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
+        player = GameObject.FindGameObjectWithTag("Player");
+        cam = FindObjectOfType<Camera>();
 	}
 }
