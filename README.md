@@ -1,2 +1,2 @@
 # Honey Bomb
-# Created by Aksel Taylan and Aren Taylan
+Created by Aksel Taylan and Aren Taylan
