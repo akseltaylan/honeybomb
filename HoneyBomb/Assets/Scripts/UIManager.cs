@@ -7,6 +7,7 @@ public class UIManager : MonoBehaviour {
 
     public Image currentHoneyBar;
     public Image warningIcon;
+    public Image honeyCombBar;
 
     public static UIManager instance;
 

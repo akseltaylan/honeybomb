@@ -33,11 +33,17 @@ public class HoneyCollecting : MonoBehaviour {
                 Destroy(gameObject);
             }
         }
+        else
+        {
+            UIManager.instance.honeyCombBar.enabled = false;
+        }
 	}
 
     // checks if honey is in camera's view and player is close enough to gather it
     public bool honeyAttainable()
     {
+        UIManager.instance.honeyCombBar.enabled = true;
+
         Vector3 screenPoint = cam.WorldToViewportPoint(transform.position);
         bool onScreen = screenPoint.z > 0 && screenPoint.x > 0 && screenPoint.x < 1 && screenPoint.y > 0 && screenPoint.y < 1;
         bool closeEnough = Mathf.Abs(transform.position.x - player.transform.position.x) < distanceThreshold && Mathf.Abs(transform.position.z - player.transform.position.z) < distanceThreshold;
@@ -57,6 +63,7 @@ public class HoneyCollecting : MonoBehaviour {
         currentHoneyAmt -= 1;
         GameManager.instance.currentHoneyAmt += 1;
         UIManager.instance.currentHoneyBar.fillAmount = GameManager.instance.currentHoneyAmt / 200f;
+        UIManager.instance.honeyCombBar.fillAmount = currentHoneyAmt / 50f;
         yield return new WaitForEndOfFrame();
     }
 }
