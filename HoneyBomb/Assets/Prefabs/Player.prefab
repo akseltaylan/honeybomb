@@ -56,8 +56,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4477954820260492}
-  - component: {fileID: 111324286288328594}
-  - component: {fileID: 114879407690293030}
+  - component: {fileID: 111019365862222906}
+  - component: {fileID: 114539256971727238}
   m_Layer: 0
   m_Name: CameraHolder
   m_TagString: Untagged
@@ -206,7 +206,7 @@ AudioListener:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1025509128318590}
   m_Enabled: 1
---- !u!111 &111324286288328594
+--- !u!111 &111019365862222906
 Animation:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -236,7 +236,7 @@ MonoBehaviour:
   speed: 55
   sensitivity: 5
   cam: {fileID: 20146169632162426}
---- !u!114 &114879407690293030
+--- !u!114 &114539256971727238
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -247,7 +247,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3304295cac18953439f6e09024690531, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anim: {fileID: 111324286288328594}
+  anim: {fileID: 111019365862222906}
 --- !u!136 &136283889809194970
 CapsuleCollider:
   m_ObjectHideFlags: 1
