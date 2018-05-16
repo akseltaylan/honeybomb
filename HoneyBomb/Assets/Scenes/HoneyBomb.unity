@@ -1691,7 +1691,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: 50051509835df594794aa02a2f64310f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.42726254
+      value: -75
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 50051509835df594794aa02a2f64310f, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1699,7 +1699,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 50051509835df594794aa02a2f64310f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 70.8
+      value: 128
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 50051509835df594794aa02a2f64310f, type: 3}
       propertyPath: m_LocalRotation.x
@@ -6252,7 +6252,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: e7575cf226dc21a469916972a6dac7c4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -61.1
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e7575cf226dc21a469916972a6dac7c4, type: 3}
       propertyPath: m_LocalPosition.y
@@ -6260,7 +6260,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e7575cf226dc21a469916972a6dac7c4, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 109.8
+      value: 76
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e7575cf226dc21a469916972a6dac7c4, type: 3}
       propertyPath: m_LocalRotation.x
@@ -6417,6 +6417,19 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d70739c0632f35d4dba4e5bddca026d7, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1788748635 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1025509128318590, guid: 4cae9aea0b134e747bceb899f7eb4660,
+    type: 2}
+  m_PrefabInternal: {fileID: 1065857764}
+--- !u!45 &1788748639
+Skybox:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1788748635}
+  m_Enabled: 1
+  m_CustomSkybox: {fileID: 2100000, guid: ed0337a13deb043468a9333a26f0cbc4, type: 2}
 --- !u!1001 &1797201119
 Prefab:
   m_ObjectHideFlags: 0
@@ -6484,7 +6497,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: f5fcff4f535d8714eab5fc5d60530c2d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -61.6
+      value: 16.5
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f5fcff4f535d8714eab5fc5d60530c2d, type: 3}
       propertyPath: m_LocalPosition.y
@@ -6492,7 +6505,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f5fcff4f535d8714eab5fc5d60530c2d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 125
+      value: 91.2
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f5fcff4f535d8714eab5fc5d60530c2d, type: 3}
       propertyPath: m_LocalRotation.x
