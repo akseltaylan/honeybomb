@@ -12,13 +12,27 @@ public class BeePathfinder : MonoBehaviour {
     Camera cam;
     NavMeshAgent beeNavMesh;
 
+    //gun
+    int cooldown = 0;
+
     private void Update()
     {
         if (moving)
         {
             transform.position = new Vector3(transform.position.x, transform.position.y + Mathf.Sin(Time.time * bobbingAnimationSpeed), transform.position.z);
         }
+
         pathToPlayer();
+
+        if(cooldown > 0)
+        {
+            cooldown--;
+            if(cooldown == 0)
+            {
+                asleep = false;
+                Debug.Log("BEE AWAKE");
+            }
+        }
     }
 
     private void Awake()
@@ -41,6 +55,18 @@ public class BeePathfinder : MonoBehaviour {
         else
         {
             moving = false;
+        }
+    }
+
+    //gun reaction
+    private void OnTriggerEnter(Collider other)
+    {
+        if (cooldown == 0 && !asleep )
+        {
+            asleep = true;
+            beeNavMesh.destination = transform.position;
+            cooldown = 360;
+            Debug.Log("BEE ASLEEP");
         }
     }
 }
