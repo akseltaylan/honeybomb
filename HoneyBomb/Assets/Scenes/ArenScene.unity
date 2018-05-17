@@ -105,14 +105,14 @@ NavMeshSettings:
     ledgeDropHeight: 0
     maxJumpAcrossDistance: 0
     minRegionArea: 2
-    manualCellSize: 0
-    cellSize: 0.16666667
+    manualCellSize: 1
+    cellSize: 0.1
     manualTileSize: 0
     tileSize: 256
     accuratePlacement: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 0}
+  m_NavMeshData: {fileID: 23800000, guid: ffc0255607ff3b04f9aa712a943c65fd, type: 2}
 --- !u!1001 &33517780
 Prefab:
   m_ObjectHideFlags: 0
@@ -190,6 +190,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e45da76bfaf1d2c48884f4a668fcc5d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  beePrefab: {fileID: 1707115549281952, guid: fc844dbd00f50c34bb8743068ce0d325, type: 2}
   currentHoneyAmt: 0
 --- !u!1 &80339840 stripped
 GameObject:
@@ -206,6 +207,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e45da76bfaf1d2c48884f4a668fcc5d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  beePrefab: {fileID: 1707115549281952, guid: fc844dbd00f50c34bb8743068ce0d325, type: 2}
   currentHoneyAmt: 0
 --- !u!1001 &85388753
 Prefab:
@@ -349,7 +351,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!65 &147021831
 BoxCollider:
@@ -561,7 +563,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4219772808854314, guid: d70739c0632f35d4dba4e5bddca026d7, type: 2}
       propertyPath: m_RootOrder
-      value: 11
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1254000589825254, guid: d70739c0632f35d4dba4e5bddca026d7, type: 2}
       propertyPath: m_Name
@@ -761,7 +763,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 50.000004, y: -106.644005, z: 0}
 --- !u!1001 &178206598
 Prefab:
@@ -1209,6 +1211,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e45da76bfaf1d2c48884f4a668fcc5d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  beePrefab: {fileID: 1707115549281952, guid: fc844dbd00f50c34bb8743068ce0d325, type: 2}
   currentHoneyAmt: 0
 --- !u!1 &253702892
 GameObject:
@@ -1777,6 +1780,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e45da76bfaf1d2c48884f4a668fcc5d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  beePrefab: {fileID: 1707115549281952, guid: fc844dbd00f50c34bb8743068ce0d325, type: 2}
   currentHoneyAmt: 0
 --- !u!4 &353387450 stripped
 Transform:
@@ -2043,6 +2047,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e45da76bfaf1d2c48884f4a668fcc5d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  beePrefab: {fileID: 1707115549281952, guid: fc844dbd00f50c34bb8743068ce0d325, type: 2}
   currentHoneyAmt: 0
 --- !u!1 &408275621
 GameObject:
@@ -2061,7 +2066,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!65 &408275622
 BoxCollider:
@@ -2285,6 +2290,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e45da76bfaf1d2c48884f4a668fcc5d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  beePrefab: {fileID: 1707115549281952, guid: fc844dbd00f50c34bb8743068ce0d325, type: 2}
   currentHoneyAmt: 0
 --- !u!1001 &447205503
 Prefab:
@@ -2612,7 +2618,7 @@ Transform:
   - {fileID: 959039375}
   - {fileID: 595329237}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &487694436
 Prefab:
@@ -2744,48 +2750,6 @@ Transform:
   m_PrefabParentObject: {fileID: 4219772808854314, guid: d70739c0632f35d4dba4e5bddca026d7,
     type: 2}
   m_PrefabInternal: {fileID: 583649548}
---- !u!1001 &519198924
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4133446975257360, guid: eb2309c8334419b42ab58bafbcb3f77f, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -75
-      objectReference: {fileID: 0}
-    - target: {fileID: 4133446975257360, guid: eb2309c8334419b42ab58bafbcb3f77f, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 10.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 4133446975257360, guid: eb2309c8334419b42ab58bafbcb3f77f, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 128
-      objectReference: {fileID: 0}
-    - target: {fileID: 4133446975257360, guid: eb2309c8334419b42ab58bafbcb3f77f, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0.8384505
-      objectReference: {fileID: 0}
-    - target: {fileID: 4133446975257360, guid: eb2309c8334419b42ab58bafbcb3f77f, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: -0.052226033
-      objectReference: {fileID: 0}
-    - target: {fileID: 4133446975257360, guid: eb2309c8334419b42ab58bafbcb3f77f, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: -0.32118994
-      objectReference: {fileID: 0}
-    - target: {fileID: 4133446975257360, guid: eb2309c8334419b42ab58bafbcb3f77f, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: -0.43716156
-      objectReference: {fileID: 0}
-    - target: {fileID: 4133446975257360, guid: eb2309c8334419b42ab58bafbcb3f77f, type: 2}
-      propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: eb2309c8334419b42ab58bafbcb3f77f, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1001 &530990886
 Prefab:
   m_ObjectHideFlags: 0
@@ -2863,6 +2827,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e45da76bfaf1d2c48884f4a668fcc5d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  beePrefab: {fileID: 1707115549281952, guid: fc844dbd00f50c34bb8743068ce0d325, type: 2}
   currentHoneyAmt: 0
 --- !u!1001 &535567806
 Prefab:
@@ -3111,6 +3076,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e45da76bfaf1d2c48884f4a668fcc5d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  beePrefab: {fileID: 1707115549281952, guid: fc844dbd00f50c34bb8743068ce0d325, type: 2}
   currentHoneyAmt: 0
 --- !u!1001 &583649548
 Prefab:
@@ -4000,6 +3966,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e45da76bfaf1d2c48884f4a668fcc5d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  beePrefab: {fileID: 1707115549281952, guid: fc844dbd00f50c34bb8743068ce0d325, type: 2}
   currentHoneyAmt: 0
 --- !u!1001 &782172187
 Prefab:
@@ -4332,7 +4299,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4626854501250892, guid: 23adb7f30c4224e46952be4886c0788f, type: 2}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 224169138144556612, guid: 23adb7f30c4224e46952be4886c0788f,
         type: 2}
@@ -4804,6 +4771,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e45da76bfaf1d2c48884f4a668fcc5d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  beePrefab: {fileID: 1707115549281952, guid: fc844dbd00f50c34bb8743068ce0d325, type: 2}
   currentHoneyAmt: 0
 --- !u!1001 &932155318
 Prefab:
@@ -5064,6 +5032,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e45da76bfaf1d2c48884f4a668fcc5d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  beePrefab: {fileID: 1707115549281952, guid: fc844dbd00f50c34bb8743068ce0d325, type: 2}
   currentHoneyAmt: 0
 --- !u!1 &959039374
 GameObject:
@@ -5728,6 +5697,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e45da76bfaf1d2c48884f4a668fcc5d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  beePrefab: {fileID: 1707115549281952, guid: fc844dbd00f50c34bb8743068ce0d325, type: 2}
   currentHoneyAmt: 0
 --- !u!1001 &1031660826
 Prefab:
@@ -5892,7 +5862,7 @@ Transform:
   m_Children:
   - {fileID: 1284875638}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!199 &1033479846
 ParticleSystemRenderer:
@@ -10682,7 +10652,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4296590431167688, guid: 4cae9aea0b134e747bceb899f7eb4660, type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4cae9aea0b134e747bceb899f7eb4660, type: 2}
@@ -11102,6 +11072,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e45da76bfaf1d2c48884f4a668fcc5d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  beePrefab: {fileID: 1707115549281952, guid: fc844dbd00f50c34bb8743068ce0d325, type: 2}
   currentHoneyAmt: 0
 --- !u!1 &1176421014 stripped
 GameObject:
@@ -11118,6 +11089,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e45da76bfaf1d2c48884f4a668fcc5d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  beePrefab: {fileID: 1707115549281952, guid: fc844dbd00f50c34bb8743068ce0d325, type: 2}
   currentHoneyAmt: 0
 --- !u!4 &1191504570 stripped
 Transform:
@@ -11433,6 +11405,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e45da76bfaf1d2c48884f4a668fcc5d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  beePrefab: {fileID: 1707115549281952, guid: fc844dbd00f50c34bb8743068ce0d325, type: 2}
   currentHoneyAmt: 0
 --- !u!1001 &1235117870
 Prefab:
@@ -11507,6 +11480,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e45da76bfaf1d2c48884f4a668fcc5d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  beePrefab: {fileID: 1707115549281952, guid: fc844dbd00f50c34bb8743068ce0d325, type: 2}
   currentHoneyAmt: 0
 --- !u!1001 &1240513945
 Prefab:
@@ -11628,6 +11602,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d70739c0632f35d4dba4e5bddca026d7, type: 2}
   m_IsPrefabParent: 0
+--- !u!4 &1277145402 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4723202307074960, guid: 53c4aa2d5d6d24a448c8e1a68943af84,
+    type: 2}
+  m_PrefabInternal: {fileID: 1635453228}
 --- !u!1 &1284875637
 GameObject:
   m_ObjectHideFlags: 0
@@ -11819,7 +11798,7 @@ Transform:
   - {fileID: 1039144949}
   - {fileID: 275050102}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1297049311
 Prefab:
@@ -11894,6 +11873,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e45da76bfaf1d2c48884f4a668fcc5d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  beePrefab: {fileID: 1707115549281952, guid: fc844dbd00f50c34bb8743068ce0d325, type: 2}
   currentHoneyAmt: 0
 --- !u!1001 &1303865855
 Prefab:
@@ -12390,6 +12370,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e45da76bfaf1d2c48884f4a668fcc5d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  beePrefab: {fileID: 1707115549281952, guid: fc844dbd00f50c34bb8743068ce0d325, type: 2}
   currentHoneyAmt: 0
 --- !u!1001 &1412057364
 Prefab:
@@ -12776,7 +12757,7 @@ Transform:
   m_LocalScale: {x: 2.5, y: 2.5, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1451298493
 Prefab:
@@ -12909,7 +12890,7 @@ Transform:
   m_LocalScale: {x: 2.5, y: 2.5, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &1480815038
 Animator:
@@ -14185,6 +14166,48 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d70739c0632f35d4dba4e5bddca026d7, type: 2}
   m_IsPrefabParent: 0
+--- !u!1001 &1635453228
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4723202307074960, guid: 53c4aa2d5d6d24a448c8e1a68943af84, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 31
+      objectReference: {fileID: 0}
+    - target: {fileID: 4723202307074960, guid: 53c4aa2d5d6d24a448c8e1a68943af84, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 33.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4723202307074960, guid: 53c4aa2d5d6d24a448c8e1a68943af84, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 163.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4723202307074960, guid: 53c4aa2d5d6d24a448c8e1a68943af84, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4723202307074960, guid: 53c4aa2d5d6d24a448c8e1a68943af84, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4723202307074960, guid: 53c4aa2d5d6d24a448c8e1a68943af84, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4723202307074960, guid: 53c4aa2d5d6d24a448c8e1a68943af84, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4723202307074960, guid: 53c4aa2d5d6d24a448c8e1a68943af84, type: 2}
+      propertyPath: m_RootOrder
+      value: 14
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 53c4aa2d5d6d24a448c8e1a68943af84, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1639889737 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: d8f314b28e251474485273abefef18ac, type: 3}
@@ -14200,6 +14223,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e45da76bfaf1d2c48884f4a668fcc5d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  beePrefab: {fileID: 1707115549281952, guid: fc844dbd00f50c34bb8743068ce0d325, type: 2}
   currentHoneyAmt: 0
 --- !u!1001 &1647502183
 Prefab:
@@ -14394,6 +14418,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e45da76bfaf1d2c48884f4a668fcc5d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  beePrefab: {fileID: 1707115549281952, guid: fc844dbd00f50c34bb8743068ce0d325, type: 2}
   currentHoneyAmt: 0
 --- !u!4 &1662533956 stripped
 Transform:
@@ -14425,6 +14450,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e45da76bfaf1d2c48884f4a668fcc5d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  beePrefab: {fileID: 1707115549281952, guid: fc844dbd00f50c34bb8743068ce0d325, type: 2}
   currentHoneyAmt: 0
 --- !u!4 &1709853905 stripped
 Transform:
@@ -14446,6 +14472,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e45da76bfaf1d2c48884f4a668fcc5d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  beePrefab: {fileID: 1707115549281952, guid: fc844dbd00f50c34bb8743068ce0d325, type: 2}
   currentHoneyAmt: 0
 --- !u!1001 &1711963809
 Prefab:
@@ -14666,7 +14693,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 191071d5eafa08b4a8511719cb770a09, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 191071d5eafa08b4a8511719cb770a09, type: 3}
       propertyPath: m_LocalScale.x
@@ -14696,7 +14723,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: 4fd233134f44ff74e938ee7a553e278e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.38000032
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 4fd233134f44ff74e938ee7a553e278e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -14704,7 +14731,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 4fd233134f44ff74e938ee7a553e278e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.34264833
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 4fd233134f44ff74e938ee7a553e278e, type: 3}
       propertyPath: m_LocalRotation.x
@@ -14946,6 +14973,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e45da76bfaf1d2c48884f4a668fcc5d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  beePrefab: {fileID: 1707115549281952, guid: fc844dbd00f50c34bb8743068ce0d325, type: 2}
   currentHoneyAmt: 0
 --- !u!1001 &1768057340
 Prefab:
@@ -15245,6 +15273,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e45da76bfaf1d2c48884f4a668fcc5d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  beePrefab: {fileID: 1707115549281952, guid: fc844dbd00f50c34bb8743068ce0d325, type: 2}
   currentHoneyAmt: 0
 --- !u!1001 &1815665989
 Prefab:
@@ -15319,6 +15348,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e45da76bfaf1d2c48884f4a668fcc5d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  beePrefab: {fileID: 1707115549281952, guid: fc844dbd00f50c34bb8743068ce0d325, type: 2}
   currentHoneyAmt: 0
 --- !u!4 &1841717274 stripped
 Transform:
@@ -15841,6 +15871,10 @@ Prefab:
       propertyPath: m_Name
       value: Ground
       objectReference: {fileID: 0}
+    - target: {fileID: 1992580971403886, guid: 49e9cf047d03dbf4185c247fa61bd618, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 49e9cf047d03dbf4185c247fa61bd618, type: 2}
   m_IsPrefabParent: 0
@@ -16108,6 +16142,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e45da76bfaf1d2c48884f4a668fcc5d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  beePrefab: {fileID: 1707115549281952, guid: fc844dbd00f50c34bb8743068ce0d325, type: 2}
   currentHoneyAmt: 0
 --- !u!1001 &2052798136
 Prefab:
@@ -16324,8 +16359,13 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4777305147961776, guid: f717b03708222704997afd1999184930, type: 2}
       propertyPath: m_RootOrder
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 114801671420465300, guid: f717b03708222704997afd1999184930,
+        type: 2}
+      propertyPath: beeSpawnPoint
+      value: 
+      objectReference: {fileID: 1277145402}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f717b03708222704997afd1999184930, type: 2}
   m_IsPrefabParent: 0
@@ -16344,6 +16384,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e45da76bfaf1d2c48884f4a668fcc5d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  beePrefab: {fileID: 1707115549281952, guid: fc844dbd00f50c34bb8743068ce0d325, type: 2}
   currentHoneyAmt: 0
 --- !u!1001 &2079959784
 Prefab:
@@ -16596,6 +16637,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e45da76bfaf1d2c48884f4a668fcc5d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  beePrefab: {fileID: 1707115549281952, guid: fc844dbd00f50c34bb8743068ce0d325, type: 2}
   currentHoneyAmt: 0
 --- !u!1001 &2105863138
 Prefab:
@@ -16960,6 +17002,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e45da76bfaf1d2c48884f4a668fcc5d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  beePrefab: {fileID: 1707115549281952, guid: fc844dbd00f50c34bb8743068ce0d325, type: 2}
   currentHoneyAmt: 0
 --- !u!1001 &2137309029
 Prefab:
