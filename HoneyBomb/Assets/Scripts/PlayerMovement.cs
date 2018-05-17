@@ -50,6 +50,11 @@ public class PlayerMovement : MonoBehaviour {
             velocity = new Vector3(0, 0, 0);
             Debug.Log("collided");
         }
+
+        if (col.gameObject.tag == "Enemy")
+        {
+            Debug.Log("You lost! A bee got you.");
+        }
     }
 
     void playerMove ()
