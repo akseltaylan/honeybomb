@@ -7,8 +7,7 @@ public class UIManager : MonoBehaviour {
 
     public Image currentHoneyBar;
     public Image warningIcon;
-    public Image honeyCombBar;
-    public GameObject honeyCombBarPrefab;
+    public Image thermometer;
 
     public static UIManager instance;
 

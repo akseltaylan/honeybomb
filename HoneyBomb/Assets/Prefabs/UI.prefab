@@ -865,9 +865,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentHoneyBar: {fileID: 114914616873494848}
   warningIcon: {fileID: 114417565246819932}
-  honeyCombBar: {fileID: 0}
-  honeyCombBarPrefab: {fileID: 1000965317294294, guid: 61e401f9a5a0f1744ac4976fe9ae7bb1,
-    type: 2}
+  thermometer: {fileID: 0}
 --- !u!114 &114296391310526514
 MonoBehaviour:
   m_ObjectHideFlags: 1
