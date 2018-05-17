@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4777305147961776}
   - component: {fileID: 114801671420465300}
+  - component: {fileID: 114178096140574608}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: GameManager
@@ -40,6 +41,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114178096140574608
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1048655761917912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eaf4a4e97a086294b8e02a6d2d2105d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeOut: {fileID: 2800000, guid: 5c41931bf2605394495c50675c3372c0, type: 3}
+  fadeSpeed: 0.8
 --- !u!114 &114801671420465300
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -52,9 +66,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   beePrefab: {fileID: 1707115549281952, guid: fc844dbd00f50c34bb8743068ce0d325, type: 2}
-  beeSpawnPoint: {fileID: 0}
+  beeSpawnPoint: {fileID: 4723202307074960, guid: 53c4aa2d5d6d24a448c8e1a68943af84,
+    type: 2}
   beginSpawnTime: 1
   honeyMaxAmt: 200
   currentHoneyAmt: 0
-  cannonHoneyAmt: 0
+  cannonHoneyAmt: 999
   honeyNeeded: 1000

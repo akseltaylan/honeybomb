@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour {
 
@@ -21,5 +22,12 @@ public class UIManager : MonoBehaviour {
         {
             Debug.Log("Warning: multiple " + this + " in scene!");
         }
+    }
+
+    public void replayOnClick()
+    {
+        Camera cam = FindObjectOfType<Camera>();
+        Destroy(cam);
+        SceneManager.LoadScene("AkselWorking2");
     }
 }

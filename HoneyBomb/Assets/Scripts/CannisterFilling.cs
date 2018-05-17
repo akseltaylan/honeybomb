@@ -41,6 +41,10 @@ public class CannisterFilling : MonoBehaviour {
             GameManager.instance.currentHoneyAmt -= 1;
             UIManager.instance.currentHoneyBar.fillAmount = GameManager.instance.currentHoneyAmt / 200f;
             UIManager.instance.thermometer.fillAmount = GameManager.instance.cannonHoneyAmt / 1000f;
+            if (GameManager.instance.cannonHoneyAmt == GameManager.instance.honeyNeeded)
+            {
+                StartCoroutine(GameManager.instance.winGame());
+            }
             // also add thermometer filling up here when it's in game
             yield return new WaitForEndOfFrame();
     }

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
 
@@ -42,6 +43,13 @@ public class GameManager : MonoBehaviour {
     {
         Instantiate(beePrefab, beeSpawnPoint.position, new Quaternion(0f, 0f, 0f, 0f));
 
+    }
+
+    public IEnumerator winGame()
+    {
+        float fadeTime = GetComponent<Fade>().BeginFade(1);
+        yield return new WaitForSeconds(fadeTime);
+        SceneManager.LoadScene("WinGame");
     }
 
     public bool tooMuchHoney ()
