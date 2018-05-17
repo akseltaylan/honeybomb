@@ -12,6 +12,10 @@ public class PlayerMovement : MonoBehaviour {
     Vector3 rotation;
     Vector3 cameraRotation;
 
+    //Gun
+    public GameObject PHitbox;
+    int cooldown = 0;
+
 	void Start () {
         rb = GetComponent<Rigidbody>();
 	}
@@ -34,6 +38,28 @@ public class PlayerMovement : MonoBehaviour {
 
         // vector for turning camera around y axis
         cameraRotation = new Vector3(xRotation, 0, 0) * sensitivity;
+
+        //Shoot
+        bool shoot = Input.GetMouseButtonDown(0);
+        if (shoot && cooldown == 0)
+        {
+            PHitbox.SetActive(true);
+            cooldown = 120;
+            Debug.Log("Poof!");
+        }
+        if(cooldown > 0)
+        {
+            if(PHitbox.active && cooldown < 60)
+            {
+                PHitbox.SetActive(false);
+                Debug.Log("Poof Deactived");
+            }
+            cooldown--;
+            if(cooldown == 0)
+            {
+                Debug.Log("Poof Refreshed");
+            }
+        }
 	}
 
     private void FixedUpdate()
