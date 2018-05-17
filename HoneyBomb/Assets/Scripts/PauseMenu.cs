@@ -32,6 +32,9 @@ public class PauseMenu : MonoBehaviour
 
     void Pause()
     {
+        UIManager.instance.pauseMenuText.text = "Cannon Status: " +
+            GameManager.instance.cannonHoneyAmt + "/" +
+            GameManager.instance.honeyNeeded; 
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         GameIsPaused = true;

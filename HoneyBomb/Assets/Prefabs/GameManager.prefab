@@ -66,10 +66,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   beePrefab: {fileID: 1707115549281952, guid: fc844dbd00f50c34bb8743068ce0d325, type: 2}
-  beeSpawnPoint: {fileID: 4723202307074960, guid: 53c4aa2d5d6d24a448c8e1a68943af84,
-    type: 2}
+  beeSpawnPoint: {fileID: 0}
   beginSpawnTime: 1
   honeyMaxAmt: 200
   currentHoneyAmt: 0
-  cannonHoneyAmt: 999
+  cannonHoneyAmt: 0
   honeyNeeded: 1000

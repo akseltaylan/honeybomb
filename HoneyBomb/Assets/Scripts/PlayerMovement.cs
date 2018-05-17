@@ -22,6 +22,16 @@ public class PlayerMovement : MonoBehaviour {
 	
 	void Update () {
 
+        if (GameManager.instance.currentHoneyAmt == GameManager.instance.honeyMaxAmt)
+        {
+            Debug.Log("YO u outta honeyroom bitch");
+            UIManager.instance.warningIcon.SetActive(true);
+        }
+        else
+        {
+            UIManager.instance.warningIcon.SetActive(false);
+        }
+
         float xMovement = Input.GetAxisRaw("Horizontal");
         float yMovement = Input.GetAxisRaw("Vertical");
 
@@ -80,6 +90,7 @@ public class PlayerMovement : MonoBehaviour {
         if (col.gameObject.tag == "Enemy")
         {
             Debug.Log("You lost! A bee got you.");
+            UIManager.instance.gameOverState();
         }
     }
 

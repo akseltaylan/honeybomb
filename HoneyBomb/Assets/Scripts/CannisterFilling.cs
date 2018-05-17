@@ -17,21 +17,26 @@ public class CannisterFilling : MonoBehaviour {
         if (closeToCannister())
         {
             Debug.Log("You're close enough to fill the cannon!");
+            UIManager.instance.cannonPrompt.SetActive(true);
             if (Input.GetButton("Space"))
             { 
                 StartCoroutine(fillCannon());
             }
+        }
+        else
+        {
+            UIManager.instance.cannonPrompt.SetActive(false);
         }
     }
 
     bool closeToCannister()
     {
         Vector3 screenPoint = cam.WorldToViewportPoint(transform.position);
-        bool onScreen = screenPoint.z > 0 && screenPoint.x > 0 && screenPoint.x < 1 && screenPoint.y > 0 && screenPoint.y < 1;
+        //bool onScreen = screenPoint.z > 0 && screenPoint.x > 0 && screenPoint.x < 1 && screenPoint.y > 0 && screenPoint.y < 1;
         bool closeEnough = Mathf.Abs(transform.position.x - player.transform.position.x) < distanceThreshold && Mathf.Abs(transform.position.z - player.transform.position.z) < distanceThreshold;
         bool hasHoney = GameManager.instance.currentHoneyAmt != 0;
 
-        return onScreen && closeEnough && hasHoney;
+        return closeEnough && hasHoney;
 
     }
 
