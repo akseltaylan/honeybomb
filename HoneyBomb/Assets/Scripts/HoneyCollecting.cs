@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HoneyCollecting : MonoBehaviour {
 
@@ -9,6 +10,7 @@ public class HoneyCollecting : MonoBehaviour {
     public GameObject beePrefab;
     public static int fullHoneyAmt = 50;
     public int currentHoneyAmt;
+    public Image honeyBarFill;
 
     public static int distanceThreshold = 25;
 
@@ -21,6 +23,7 @@ public class HoneyCollecting : MonoBehaviour {
 	void Update () {
         if (honeyAttainable())
         {
+            honeyBarFill.enabled = true;
             Debug.Log("You can gather this honey!");
 
             // actual gathering of the honey
@@ -32,29 +35,24 @@ public class HoneyCollecting : MonoBehaviour {
             if (currentHoneyAmt == 0)
             {
                 Instantiate(beePrefab, transform.position, new Quaternion(0f,0f,0f,0f));
+                Destroy(honeyBarFill);
                 Destroy(gameObject);
             }
         }
         else
         {
-            UIManager.instance.honeyCombBar.enabled = false;
+            honeyBarFill.enabled = false;
         }
 	}
 
     // checks if honey is in camera's view and player is close enough to gather it
     public bool honeyAttainable()
     {
-        UIManager.instance.honeyCombBar.enabled = true;
 
         Vector3 screenPoint = cam.WorldToViewportPoint(transform.position);
         bool onScreen = screenPoint.z > 0 && screenPoint.x > 0 && screenPoint.x < 1 && screenPoint.y > 0 && screenPoint.y < 1;
         bool closeEnough = Mathf.Abs(transform.position.x - player.transform.position.x) < distanceThreshold && Mathf.Abs(transform.position.z - player.transform.position.z) < distanceThreshold;
         bool maxHoney = GameManager.instance.tooMuchHoney();
-
-        if (onScreen && closeEnough && !maxHoney)
-        {
-            UIManager.instance.warningIcon.enabled = true;
-        }
 
         return onScreen && closeEnough && maxHoney;
     }
@@ -65,7 +63,7 @@ public class HoneyCollecting : MonoBehaviour {
         currentHoneyAmt -= 1;
         GameManager.instance.currentHoneyAmt += 1;
         UIManager.instance.currentHoneyBar.fillAmount = GameManager.instance.currentHoneyAmt / 200f;
-        UIManager.instance.honeyCombBar.fillAmount = currentHoneyAmt / 50f;
+        honeyBarFill.fillAmount = currentHoneyAmt / 50f;
         yield return new WaitForEndOfFrame();
     }
 }
