@@ -1,6 +1,8 @@
 # Honey Bomb
 Created by Aksel Taylan and Aren Taylan
 
+! Please do not alter this game and call it your own. You can read through the scripts and get an idea of how we accomplished certain things.
+
 This game was developed in under 48 hours to practice for future game jams and coding competitions.
 
 Premise:
@@ -12,3 +14,8 @@ Controls:
 -Escape to pause the game
 -Use the mouse to control the rotation of the camera
 -Click on the screen to spray the bee smoker
+
+Credits:
+-Aksel Taylan: All coding except weapon functionality, game design, UI/UX
+
+-Aren Taylan: Modeling, game design, level design, music, weapon functionality, QA
