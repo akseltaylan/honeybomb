@@ -35,7 +35,7 @@ public class GameManager : MonoBehaviour {
         player = GameObject.FindGameObjectWithTag("Player");
         cam = FindObjectOfType<Camera>();
 
-        InvokeRepeating("beeSpawn", beginSpawnTime, 15f);
+        //InvokeRepeating("beeSpawn", beginSpawnTime, 15f);
 	}
 
     public void beeSpawn ()
