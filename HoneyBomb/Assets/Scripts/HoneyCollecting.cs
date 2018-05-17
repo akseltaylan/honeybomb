@@ -6,6 +6,7 @@ public class HoneyCollecting : MonoBehaviour {
 
     GameObject player;
     Camera cam;
+    public GameObject beePrefab;
     public static int fullHoneyAmt = 50;
     public int currentHoneyAmt;
 
@@ -30,6 +31,7 @@ public class HoneyCollecting : MonoBehaviour {
 
             if (currentHoneyAmt == 0)
             {
+                Instantiate(beePrefab, transform.position, new Quaternion(0f,0f,0f,0f));
                 Destroy(gameObject);
             }
         }
