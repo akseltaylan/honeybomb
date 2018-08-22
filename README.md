@@ -3,7 +3,7 @@ Created by Aksel Taylan and Aren Taylan
 
 ! Please do not alter this game and call it your own. You can read through the scripts and get an idea of how we accomplished certain things.
 
-This game was developed in under 48 hours to practice for future game jams and coding competitions.
+This game was developed in under 48 hours to practice for a game jam competition.
 
 ![alt text](https://i.imgur.com/ULX411l.png)
 ![alt text](https://i.imgur.com/e4NVurI.png)
